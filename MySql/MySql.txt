@@ -1,1 +1,109 @@
+What is MySql?
 MySql is a relational database management system(RDBMS) developed by Oracle that is based on structured query language(SQL).
+
+
+What is Database?
+A database is an Organized collection of 'structured information' or 'data'.
+
+
+What is DBMS?
+Database Management Systems(DBMS) are software systems used to store, retrieve, and run queries on data.
+
+CURD Operations --> Create, Read, Update,Delete.
+
+
+Types of DBMS:=
+i)Relational (SQL)
+ii)Non-Relational (Non-SQL)
+
+
+
+What is Relatinal database?
+A relational database is a collection of data items with pre-defined relationship between them,
+stored in the form of table,rows and columns.
+
+List of SQL Databases: MySql, MariaDB, Oracle, PostgreSQL, MSSQL.
+
+
+
+
+
+
+How to install MySql
+
+1.Install a server    -->     MySQL Community Server
+2.Install MySQL Workbench
+
+go to google search "mysql.com"+enter
+select/click on "downloads"
+sroll down and select last row "MySQL Community(GPL) Downloads.
+next select MySQL Installer for Windows
+
+
+
+
+What is a database Table?
+Database table is a collection of rows and columns that contains relational data.
+
+
+MySQL Workbench
+***************
+create database jyothi;-->(jyothi is a database name)
+use jyothi;
+
+
+
+Categories of Datatypes: String, Numeric and Date&Time.
+
+
+proper schema
+============
+User table : id,name,email,contact,password,address,dob,gender,status.
+
+
+
+MySQL Workbench
+***************
+CREATE TABLE users(
+id int unsigned,
+name varchar(100),
+email varchar(150),
+password varchar(100),
+contact int,
+address text,
+dob date,
+gender enum("M","F","O"),
+status boolean
+)
+
+
+//insert into single row
+INSERT INTO users(id, name, email, password, contact, address, dob, gender, status)
+VALUES(1,"Jyothi","jyothi@gmail.com","0000000", "123456789", "kukkatpalli,Hyderabad","1995-10-22", "F", 1);
+
+
+//select query
+SELECT * FROM jyothi.users;
+
+
+//insert into multiple row
+INSERT INTO users(id, name, email, password, contact, address, dob, gender, status)
+VALUES(1,"Jyothi","jyothi@gmail.com","0000000", "123456789", "kukkatpalli,Hyderabad","1995-10-22", "F", 1),
+(2,"Devi","devi@gmail.com","00000900", "123776789", "sr nagar,Hyderabad","2000-8-12", "F", 1),
+(3,"Ymimi","yamini@gmail.com","00600900", "123776789", "chaitanyaputi,Hyderabad","1999-5-16", "F", 1);
+
+
+INSERT INTO users
+VALUES(4,"Ravi","ravi@gmail.com","0000000", "123456789", "kukkatpalli,Hyderabad","1995-10-22", "F", 1),
+(5,"chandu","chandu@gmail.com","00000900", "123776789", "sr nagar,Hyderabad","2000-8-12", "F", 1);
+
+
+
+CREATE TABLE students(
+id int,
+name varchar(100),
+email varchar(300),
+age int,
+city text
+)
+VALUES(1,"John","john@gmail.com"
